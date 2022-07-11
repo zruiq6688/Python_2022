@@ -34,5 +34,3 @@ agg_output = dff.withColumn("next_receipt_begin_time", lead('begin_date_time').o
 
 ##describe table without scientific notation
 df.describe().apply(lambda s: s.apply('{0:.5f}'.format))
-
-print("hello")
