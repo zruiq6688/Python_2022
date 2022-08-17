@@ -1,0 +1,12 @@
+##NUMPY
+import numpy as np
+
+np.random.rand()
+np.random.randn()
+np.random.randint()
+
+###TO KEEP THE SAME ARRAY IN A SEED 
+np.random.seed(42)
+np.random.rand(6)
+
+##
