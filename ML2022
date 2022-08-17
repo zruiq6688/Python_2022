@@ -5,8 +5,13 @@ np.random.rand()
 np.random.randn()
 np.random.randint()
 
-###TO KEEP THE SAME ARRAY IN A SEED 
+np.arange()
+np.linspace(0,10,11)
+
+np.zeros()
+np.ones(2)
+np.ones((2,2))
+
+###TO KEEP THE SAME ARRAY IN A SEED
 np.random.seed(42)
 np.random.rand(6)
-
-##
