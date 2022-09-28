@@ -12,6 +12,18 @@ np.zeros()
 np.ones(2)
 np.ones((2,2))
 
-###TO KEEP THE SAME ARRAY IN A SEED
+###TO KEEP THE SAME ARRAY IN A SEED(they have to be in the same command)
 np.random.seed(42)
 np.random.rand(6)
+
+
+###SOME USEFUL METHODS/ATTRIBUTES
+arr = np.arange(0,25) #this is a 1d array. shape gives you (25,)
+arr.reshape(1,25) #this is a 2d array. shape gives you (1,25)
+
+arr = np.random.randint(0,101,10)
+arr.max()
+arr.min()
+arr.argmax() ##the index location
+arr.dtype() ##gives the type
+arr.shape
