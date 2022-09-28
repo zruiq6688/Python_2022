@@ -19,3 +19,13 @@ arr_2d[2,2]
 arr[0:2] = 99
 #to avoid broadcasting use copy
 arr_copy = arr.copy()
+
+##operations
+arr +5
+arr/arr #divided by 0 will give you nah
+arr.sum()
+arr.mean()
+arr.var()
+arr.std()
+arr_2d.sum(axis = 0)
+arr_2d.sum(axis = 1)

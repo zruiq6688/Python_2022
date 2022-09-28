@@ -1,16 +1,17 @@
 ##NUMPY
 import numpy as np
 
-np.random.rand()
-np.random.randn()
+np.random.rand(3)
+np.random.randn(25) ##returns normal distribution
 np.random.randint()
 
 np.arange()
 np.linspace(0,10,11)
 
-np.zeros()
+np.zeros(10)
 np.ones(2)
 np.ones((2,2))
+np.eye(3)
 
 ###TO KEEP THE SAME ARRAY IN A SEED(they have to be in the same command)
 np.random.seed(42)
