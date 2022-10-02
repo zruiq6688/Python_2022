@@ -28,6 +28,8 @@ df.iloc[:,[1,3,5,7]]
 ##################retrive certain rows#################################
 df.iloc[2]
 ##OR
+df[2:3]
+##OR
 df.loc["Sun2929"] ##with labelled index
 
 
