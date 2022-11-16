@@ -12,6 +12,8 @@ df.index
 df.head(5)
 df.tail()
 df.info()
+df.duplicated()
+df.drop_duplicates()
 
 ##statistical analysis
 df.describe()
@@ -65,3 +67,21 @@ df.iloc[:,2] ##take column 2
 ##############################conditional filtering########################################
 df[(df['total_bill'] > 30) & (df['sex'] == 'Male')] ##and/or is only used to compare 2 single boolean values, not used for series of boolean values
 df[df['day'].isin(['Sat','Sun'])]
+
+
+##############################categoritical columns########################################
+df['sex'].value_counts()
+df['sex'].unique()
+df['sex'].nunique() == len(df['sex'].unique())
+
+df['sex'].replace(['Female','Male'],['F','M']) ##easy to use when replacing null values
+##or
+mymap = {'Female':'F','Male':'M'}
+df['sex'].map(mymap)
+
+
+######################################################################
+df.nlargest(2,'tip')
+df.nsmallest(2,'tip')
+df.sample(5)
+df.sample(frac = 0.1)

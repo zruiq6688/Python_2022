@@ -20,6 +20,26 @@ def quality(total_bill, tip):
         return 'other'
 ## you can either use apply
 df['quality'] = df[['total_bill','tip']].apply(lambda df: quality(df['total_bill'],df['tip']),axis = 1)
-## or you can use numpy vectorize, which should be much faster
+## or you can use numpy vectorize, which makes the code numpy-aware --> better performance
 import numpy as np
 df['quality'] = np.vectorize(quality)(df['total_bill'],df['tip'])
+
+
+####################################
+df['total_bill'].idxmax()
+df.corr() ## only works with numeric value
+df['sex'].value_counts()
+df['day'].unique()
+df['day'].nunique() == len(df['day'].unique())
+
+df['sex'].replace(['Female','Male'],['F','M'])
+==
+mymap = {'Female':'F','Male':'M'} ## eaier to work with if multiple values
+df['sex'].map(mymap)
+
+df.duplicated()
+df.drop_duplicates()
+df['total_bill'].between(10,20,inclusive = True)
+df.nlargest(5,'tip')
+df.nsmallest(5,'tip')
+df.sample(frac = 0.05)
