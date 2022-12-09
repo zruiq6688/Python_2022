@@ -16,6 +16,7 @@ df.duplicated()
 df.drop_duplicates()
 
 ##statistical analysis
+pd.set_option('display.float_format', lambda x: '%.3f' % x)
 df.describe()
 df.describe().transpose()
 
@@ -78,6 +79,8 @@ df['sex'].replace(['Female','Male'],['F','M']) ##easy to use when replacing null
 ##or
 mymap = {'Female':'F','Male':'M'}
 df['sex'].map(mymap)
+##or
+df['sex'].replace({'Female':'F','Male':'M'})
 
 
 ######################################################################
