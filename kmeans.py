@@ -22,7 +22,7 @@ plt.plot(range(2,10),ssd,'o--')
 # to get a sense of the difference
 pd.Series(ssd).diff()#.plot(kind='bar')
 
-# final model 
-kmeans_model = KMeans(n_clusters=5,random_state=10)
+# final model
+kmeans_model = KMeans(n_clusters=5,random_state=101)
 kmeans_model.fit(scaled_X)
 k_label=kmeans_model.predict(scaled_X)

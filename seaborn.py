@@ -39,3 +39,14 @@ plt.ylim()
 plt.title()
 plt.suptitle()
 plt.legend()
+
+####################### to add annot ##############################
+ax = sns.countplot(data=df,x='sex',hue='species')
+
+for p in ax.patches:
+    ax.annotate('{:.1f}'.format(p.get_height()), (p.get_x(), p.get_height()))
+plt.show()
+
+######################## to have the x lable ordered ########################
+sns.countplot(data=df_city[df_city['label']==2],x='city',order=df_city['city'].value_counts().index,hue='label')
+plt.xticks(rotation = 90)
