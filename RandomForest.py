@@ -29,7 +29,17 @@ for n in range (1,201):
     rfc.fit(X_train,y_train)
     pre = rfc.predict(X_test)
     err = 1-accuracy_score(y_test,pre)
-    n_missed = np.sum(pre != y_test) # pre != y_test gives a boolean series, which you can sum 
+    n_missed = np.sum(pre != y_test) # pre != y_test gives a boolean series, which you can sum
+
+    errors.append(err)
+    misclassifications.append(n_missed)
+
+for n in range (1,201):
+    rfc = RandomForestClassifier(bootstrap=True, max_features=2, n_estimators= n, random_state = 101)
+    rfc.fit(X_train,y_train)
+    pre = rfc.predict(X_test)
+    err = 1-accuracy_score(y_test,pre)
+    n_missed = np.sum(pre != y_test) # pre != y_test gives a boolean series, which you can sum
 
     errors.append(err)
     misclassifications.append(n_missed)
