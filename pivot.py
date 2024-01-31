@@ -2,4 +2,4 @@ pd.pivot_table(data=df_mpg,index='model_year',columns='origin',values=['weight',
 
 pivot.columns = pivot.columns.droplevel() # to drop multi index
 
-pivot.reset_index() # to change index back 
+pivot.reset_index(inpace = True) # to change index back 
